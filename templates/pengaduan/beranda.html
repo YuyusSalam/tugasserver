@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistem Pengaduan Mahasiswa</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#687386; --blue:#3457d5; --line:#e4e8f0; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; color:var(--ink); background:#f5f7fb; }
+    header { background:#fff; border-bottom:1px solid var(--line); padding:18px 7%; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .brand { font-weight:800; letter-spacing:-.3px; } .brand span { color:var(--blue); }
+    header a, .button { text-decoration:none; color:#fff; background:var(--blue); padding:10px 15px; border-radius:9px; font-weight:650; font-size:14px; }
+    main { max-width:1050px; margin:0 auto; padding:64px 24px; }
+    .hero { background:linear-gradient(120deg,#172b65,#3457d5); color:white; padding:48px; border-radius:22px; box-shadow:0 18px 50px #263e8a1c; }
+    .eyebrow { text-transform:uppercase; letter-spacing:1.8px; font-size:12px; opacity:.78; font-weight:700; }
+    h1 { font-size:clamp(32px,5vw,52px); letter-spacing:-1.8px; line-height:1.08; max-width:650px; margin:16px 0; }
+    .hero p { color:#e0e7ff; line-height:1.7; max-width:650px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+    .actions a { background:#fff; color:#243d9a; } .actions a.secondary { background:#ffffff1c; color:#fff; border:1px solid #ffffff55; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:22px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:15px; padding:22px; }
+    .num { width:38px; height:38px; display:grid; place-items:center; border-radius:11px; color:var(--blue); background:#edf1ff; font-weight:800; }
+    h2 { font-size:18px; margin:16px 0 8px; } .card p { color:var(--muted); line-height:1.6; font-size:14px; margin:0; }
+    footer { color:var(--muted); text-align:center; padding:20px; font-size:13px; }
+    @media(max-width:700px) { .hero { padding:30px 24px; } .grid { grid-template-columns:1fr; } main { padding-top:32px; } }
+  </style>
+</head>
+<body>
+<header><div class="brand">SIMPEL<span>.</span></div><a href="/api/">Buka REST API ↗</a></header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">Layanan kampus · Pengaduan mahasiswa</div>
+    <h1>Sampaikan aspirasi. Pantau tindak lanjutnya.</h1>
+    <p>SIMPEL adalah prototipe Sistem Pengaduan Mahasiswa berbasis REST API. Mahasiswa dapat mengirim laporan, sementara petugas mengelola tanggapan dan status melalui sistem.</p>
+    <div class="actions">
+      <a href="/api/">Jelajahi API</a>
+      <a class="secondary" href="/admin/">Masuk panel admin</a>
+    </div>
+  </section>
+  <section class="grid">
+    <article class="card"><div class="num">01</div><h2>Kirim pengaduan</h2><p>Catat masalah akademik, fasilitas, administrasi, atau kategori lainnya dengan judul dan penjelasan.</p></article>
+    <article class="card"><div class="num">02</div><h2>Pantau status</h2><p>Periksa apakah laporan masih menunggu, sedang diproses, telah selesai, atau ditolak.</p></article>
+    <article class="card"><div class="num">03</div><h2>Riwayat & tanggapan</h2><p>Setiap perubahan status tercatat dan tanggapan petugas dapat diakses melalui endpoint API.</p></article>
+  </section>
+</main>
+<footer>SIMPEL · Proyek pembelajaran Django REST Framework</footer>
+</body>
+</html>
